@@ -11,15 +11,15 @@ namespace ACM.BL.Test
         [TestMethod]
         public void FindTestExistingCustomer()
         {
-            // Arrange
+            //-- Arrange
             CustomerRepository repository = new CustomerRepository();
             var customerList = repository.Retrieve();
 
-            // Act
-            var result = repository.Find(customerList, 2);
+			//-- Act
+			var result = repository.Find(customerList, 2);
 
-            // Assert
-            Assert.IsNotNull(result);
+			//-- Assert
+			Assert.IsNotNull(result);
             Assert.AreEqual(2, result.CustomerId);
             Assert.AreEqual("Baggins", result.LastName);
             Assert.AreEqual("Bilbo", result.FirstName);

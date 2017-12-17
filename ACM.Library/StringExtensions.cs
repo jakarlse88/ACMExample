@@ -10,7 +10,7 @@ namespace ACM.Library
         /// </summary>
         public static string ConvertToTitleCase(this string source)
         {
-            CultureInfo cultureInfo   = Thread.CurrentThread.CurrentCulture;
+            CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
             TextInfo textInfo = cultureInfo.TextInfo;
 
             return textInfo.ToTitleCase(source);

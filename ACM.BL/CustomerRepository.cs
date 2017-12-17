@@ -12,43 +12,28 @@ namespace ACM.BL
         {
             Customer foundCustomer = null;
 
-            //foreach (var c in customerList)
-            //{
-            //    if (c.CustomerId == customerId)
-            //    {
-            //        foundCustomer = c;
-            //        break;
-            //    }
-            //}
+			//var query = from c in customerList
+			//			where c.CustomerId == customerId
+			//			select c;
 
-            //var query = from c in customerList
-            //            where c.CustomerId == customerId
-            //            select c;
+			//foundCustomer = query.First();
 
-            //foundCustomer = query.First();
+			//foundCustomer = customerList.FirstOrDefault(c =>
+			//					c.CustomerId == customerId);
 
-            foundCustomer = customerList.FirstOrDefault(c =>
-                                c.CustomerId == customerId);
+			//foundCustomer = customerList.FirstOrDefault(c =>
+			//				{
+			//					Debug.WriteLine(c.LastName);
+			//					return c.CustomerId == customerId;
+			//				});
 
-            //foundCustomer = customerList.FirstOrDefault(c =>
-            //                {
-            //                    Debug.WriteLine(c.LastName);
-            //                    return c.CustomerId == customerId;
-            //                });
-
-            //foundCustomer = customerList.Where(c =>
-            //                    c.CustomerId == customerId)
-            //                    .Skip(1)
-            //                    .FirstOrDefault();
-
-            //foundCustomer = customerList.Where(c =>
-            //                    c.CustomerId == customerId)
-            //                    .Skip(1)
-            //                    .FirstOrDefault();
+			foundCustomer = customerList.Where(c =>
+								c.CustomerId == customerId)
+								.Skip(1)
+								.FirstOrDefault();
 
             return foundCustomer;
-
-        }
+		}
 
         public List<Customer> Retrieve()
         {

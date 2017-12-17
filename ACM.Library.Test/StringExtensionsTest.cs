@@ -10,15 +10,14 @@ namespace ACM.Library.Test
         [TestMethod]
         public void ConvertToTitleCase()
         {
-            // Arrange
+            //-- Arrange
             var source = "the return of the king";
             var expected = "The Return Of The King";
 
-            // Act
-           //var result = StringExtensions.ConvertToTitleCase(source);
+            //-- Act
             var result = source.ConvertToTitleCase();
 
-            // Assert
+            //-- Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(expected, result);
         }
